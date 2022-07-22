@@ -39,8 +39,8 @@ if (y == 0){
 
 }
 else window.alert("Ce nombre est impair");
-*/
 
+*/
 
 
 
@@ -96,9 +96,9 @@ var V = "aeiouy";                       //  chaîne des voyelles
 var M = window.prompt("Entrer un mot:");//  saisie du mot    
 let L = M.length;                       //  longueur du mot
 let LV = V.length;                      //  Longueur de la chaîne des voyelles
-var TAB = [L,LV];                       //  tableau 2 dimensions
-let vm = 0;
-let im = 0;
+var TAB = new Array(L,LV);              //  tableau 2 dimensions
+var vm = 0;
+var im = 0;
 
 
 
@@ -110,27 +110,27 @@ let im = 0;
 document.write("Le mot ",M," comporte ",L," lettres");
 
 
-for (let im=1; im<=(L); im++)                       /*  boucle sur le mot                   */
-
+for (let im=1; im<=(L); im++)                   //  boucle sur le mot                   
 {                
-            console.log((im),"/",L);            /*  affichage de la position dans mot   */
+            console.log((im),"/",L);            //  affichage de la position dans mot   
     
-    let LM = M.substring((im-1),im);            /*   extraction de la lettre            */
+    let LM = M.substring((im-1),im);            //   extraction de la lettre            
 
-            console.log(LM);                    /*  Affichage de la lettre extraite*    */
+            console.log(LM);                    //  Affichage de la lettre extraite*    
 
 
-        for (let vm=0; vm<=(LV-1); vm++)            /*  boucle sur voyelles                 */
+        for (let vm=0; vm<=(LV-1); vm++)        //  boucle sur voyelles                 
         
         {   
-            let LVS = V.substring((vm),(vm+1)); /*  la voyelle testée                   */
+            let LVS = V.substring((vm),(vm+1)); //  la voyelle testée                   
             
             console.log("LVS=substring de V (vm,",vm,")=",LVS);
 
             let io = M.indexOf(LVS,(vm));
-          //  TAB,[im,vm] = (io>0);
+            
 
-console.log("TAB [",im,",",vm,"=",io);
+console.log("TAB [",im,",",vm,"]=",io);
+    
 
 
             io++;
@@ -146,8 +146,9 @@ console.log("TAB [",im,",",vm,"=",io);
         }
 }
 
-document.write("<br/>");
+document.write("<br/><br/>");
 
 document.write("Dont ",NV," voyelles !");
+
 
 

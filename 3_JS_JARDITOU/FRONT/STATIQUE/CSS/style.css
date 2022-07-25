@@ -7,7 +7,7 @@
 header_1 {
         display: flex;
         width: 30%;
-        min-width: 280px;
+        min-width: 200px;
         height: 100px;
         flex-direction: row;
         justify-content: center;
@@ -91,7 +91,6 @@ div_1 {
         flex-direction: column;
         width: 70%;
         font-size: 14;
-        overflow: auto;
         justify-items: left;
         background-color: beige;
         padding: 1cm;
@@ -99,13 +98,12 @@ div_1 {
 }
 
 
-div_2 {
+aside {
         display: flex;
         flex-direction: column;
         width: 30%;
         font-size: 14;
         background-color: bisque;
-        overflow: auto;
         justify-items: right;
         padding: 15px 25px 15px 25px;
         font-family: Arial, Helvetica, sans-serif;
@@ -130,6 +128,7 @@ fieldset {
 
 
 table {
+        
         width: 35%;
         align-content: center;
         }
@@ -174,7 +173,6 @@ label {
                 flex-direction: column;
                 width: 100%;
                 font-size: auto;
-                overflow: auto;
                 justify-items: auto;
                 background-color: beige;
                 padding: 0.2cm;
@@ -207,7 +205,7 @@ label {
 
 
 
-        div_2 {display: none;}
+        aside {display: none;}
 
         header_2 {display: none;}
 
@@ -223,6 +221,7 @@ label {
 
 
         table {
+                overflow-x:scroll;
                 width: 100%;
                 align-content: center;
                 }

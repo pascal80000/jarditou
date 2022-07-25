@@ -1,20 +1,21 @@
-
 // ATTENTION aux variables LOCALES ou GLOBALES
-// si variable locale, càd définie par var, 
-// elle n'est utilisable que dans une fonction
+// si variable locale, càd définie VAR var DANS une fonction, 
+// elle n'est utilisable que dans cette fonction
 
 onload (GetInteger);
+                            //========================================
+var TAILLE = Number;        // définition des variables GLOBALES    ==
+var T = Number;             //========================================
 
 
 
 
-
-//  =======================================
-//  ======      les fonctions       =======
-//  =======================================   
+                            //  =======================================
+                            //  ======      les fonctions       =======
+                            //  =======================================   
 
 function GetInteger(){
-    var TAILLE = window.prompt("Entrer une taille de tableau :");
+    TAILLE = window.prompt("Entrer une taille de tableau :");
     InitTab;
     SaisieTab;
 
@@ -55,21 +56,9 @@ function InfoTab(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//  =======================================
-//  ======      les boutons       =========
-//  =======================================   
+                            //  =======================================
+                            //  ======      les boutons       =========
+                            //  =======================================   
 
 var bouton1= document.getElementById("Id_btn1");
 bouton1.addEventListener("click",clickbtn1);

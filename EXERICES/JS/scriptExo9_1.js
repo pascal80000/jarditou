@@ -6,6 +6,7 @@
 
 // Exercice 9.1
 
+var F = ("");
 
 
 function produit(x,y)
@@ -30,12 +31,20 @@ let resultat = produit(x,y);
 //=============  affichage image  ========================
 //========================================================
 
-let image = ("img src ")
+
+
 
 function affichImg(image)
 {
 
 
-}
 
-let html = document.getElementById("myP").innerHTML;
+        document.getElementById("image").textContent='<img src="../images/'+(F)+'" id = "image" title="image papillon" alt ="image de papillon">';
+        // //document.write(image)
+
+}
+window.prompt("Entrer le nom du fichier image à ouvrir:",F);
+
+
+affichImg(F);
+

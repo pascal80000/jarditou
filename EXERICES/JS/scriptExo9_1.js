@@ -37,14 +37,18 @@ let resultat = produit(x,y);
 function affichImg(image)
 {
 
-
-
-        document.getElementById("image").textContent='<img src="../images/'+(F)+'" id = "image" title="image papillon" alt ="image de papillon">';
-        // //document.write(image)
+document.getElementById("papillon").innerHTML ="<img src='"+image+"'>";
 
 }
-window.prompt("Entrer le nom du fichier image à ouvrir:",F);
+chemin="../images/papillon.jpg";
+
+// window.prompt("Entrer le nom du fichier image à ouvrir:",F);
+
+affichImg(chemin);
+
+document.write("Le cube de "+x+" est égal à "+(x*x*x));
+
+document.write("<br/>");
 
 
-affichImg(F);
-
+document.write("Le produit de  ",x," x ",y," est égal à ",resultat);

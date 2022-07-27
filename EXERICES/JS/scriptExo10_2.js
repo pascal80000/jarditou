@@ -2,13 +2,13 @@
 // si variable locale, càd définie VAR var DANS une fonction, 
 // elle n'est utilisable que dans cette fonction
 
-onload (GetInteger);
                             //========================================
 var TAILLE = Number;        // définition des variables GLOBALES    ==
 var T = Number;             //========================================
 
 
 
+GetInteger();
 
                             //  =======================================
                             //  ======      les fonctions       =======
@@ -18,6 +18,7 @@ function GetInteger(){
     TAILLE = window.prompt("Entrer une taille de tableau :");
     InitTab;
     SaisieTab;
+        console.log("GetInteger passée");
 
 }
 
@@ -25,6 +26,8 @@ function GetInteger(){
 function InitTab(){
     let T = parseInt(TAILLE);
     var TAB = new Array(T);
+    console.log("InitTab passée"+(TAILLE));
+
 }
 
 
@@ -34,7 +37,7 @@ function SaisieTab(){
         TAB[i] = window.prompt(`Entrer valeur ${i}`);
 }
 
-
+/*
 function AfficheTab(){
     for (let i = 0; i < (T); i++)
         console.log(i);
@@ -54,7 +57,7 @@ function InfoTab(){
 
 
 
-
+*/
 
                             //  =======================================
                             //  ======      les boutons       =========

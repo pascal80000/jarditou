@@ -21,10 +21,12 @@ var nom = "";           // contiendra le résultar de la fonction
                 document.write('<br/>'+"_ str1= ",str1);
 
         var str2 = prompt("Entrer le signe séparateur");
-               document.write('<br/>'+"_ str2= ",str2);
+                document.write('<br/>'+"_ str2= ",str2);
 
         var n = prompt("Entrer l'index à rechercher : ");
                 document.write('<br/>'+"_  n == ",n,'<br/>');
+        var prem = "";
+        var chaine = "";
 
 
 
@@ -33,38 +35,29 @@ var nom = "";           // contiendra le résultar de la fonction
 //====      la fonction strtok()        ====
 //==========================================
 
-
-        function strtok(chaine, str2,n){
-
-                chaine = str1.split([str2]);
+        function strtok(chaine, str2,n)
+        {
+                chaine = str1.split([str2]);                    //====       .split crée le tableau 'chaine' à partir de la chaine de caractères 'str1'
+                                                                //====          et du séparateur 'str2' détecté dans la chaine 'str1'
                         console.log("chaine = ",chaine);
 
-                L = chaine.length;
-                        console.log("chaine comporte ",L," mots détectés.");
+                L = chaine.length;                              //====        affichage de la longueur de tableau (nombre de cellules)
+                        console.log("chaine comporte ",L," mots détectés.");//  (purement cosmétique !)
 
-                //document.write("Le nom de rang ",n," dans la chaîne str1 est:",nom);
+                chaine.splice(0,(n));                           //====          coupe les 'n' premiers caractères à partir du 'zero'
 
-                while (chaine.indexOf(p) < n)
-                {
-                        p++;
-                        chaine.shift();
-                }
-
-                        console.log("La position du mot est: ",p,"<br/>");
-
-                
-
-
-
+                prem = chaine.shift();                          //====          shift renvoie le premier terme du tableau, et le supprime du même tableau
+                        console.log("prem = ",prem);
+                        //document.write("prem =: ",prem);
+                        //document.write("<br/>","reste de chaine =: ",chaine);
                 return;
 
-}       //========= FIN  Fonction  ==============
 
+        }       
+//====      FIN  Fonction               ====
 
-
+//====   lancement de la fonction        ====
 strtok(chaine, str2,n);
 
-document.write(chaine);
-
-
-
+//====      affichage du résultat   ====
+document.write('<br/>',"Le ",n," ième mot de la chaine "+chaine+" est ("+prem+") voilà, c'est fini !");
